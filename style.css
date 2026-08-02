@@ -1,0 +1,566 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+    background:#ffffff;
+    padding:15px 0;
+    transition:.4s;
+}
+
+.navbar-brand{
+    font-size:28px;
+    font-weight:700;
+}
+
+.nav-link{
+    color:#334155 !important;
+    margin-left:18px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#2563eb !important;
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#eff6ff,#dbeafe,#ffffff);
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    font-weight:700;
+
+}
+
+.hero h3{
+
+    color:#2563eb;
+
+    margin:20px 0;
+
+}
+
+.hero p{
+
+    color:#475569;
+
+    line-height:30px;
+
+}
+
+.btn-primary{
+
+    background:#2563eb;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+}
+
+.btn-outline-primary{
+
+    border-radius:50px;
+
+    padding:14px 30px;
+
+}
+.hero-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:30px;
+}
+
+.stat-box{
+    background:#2563eb;
+    padding:18px 25px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    min-width:160px;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(37,99,235,.2);
+}
+
+.stat-box h2{
+    color:#ffffff;
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.stat-box p{
+    margin:0;
+    color:#100c0c;
+    font-size:15px;
+    font-weight:500;
+}
+
+@media(max-width:768px){
+    .hero-stats{
+        justify-content:center;
+    }
+
+    .stat-box{
+        width:45%;
+    }
+}
+
+@media(max-width:500px){
+    .stat-box{
+        width:100%;
+    }
+}
+
+/* ===========================
+   Profile
+=========================== */
+
+.profile-box{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.profile-img{
+
+    width:370px;
+
+    height:370px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:0 20px 60px rgba(37,99,235,.25);
+
+}
+
+/* ===========================
+   Social Icons
+=========================== */
+
+.social{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.social a{
+
+    width:50px;
+
+    height:50px;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#2563eb;
+
+    font-size:22px;
+
+    text-decoration:none;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    transform:translateY(-6px);
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+.section{
+
+    padding:40px 0;
+}
+
+.section-title{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+}
+
+.section-subtitle{
+
+    color:#64748b;
+
+}
+
+.size{
+    height: 600px;
+}
+
+/* ===========================
+   About
+=========================== */
+
+.about-img{
+
+    width:70%;
+    height: 70%;
+    margin-left: 100px;
+    margin-bottom: -80px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    object-fit:cover;
+}
+
+.info-card{
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom: 20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*==========================
+    EDUCATION TIMELINE
+===========================*/
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+    margin-top: 0px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#2563eb;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    position:relative;
+    width:50%;
+    padding:20px 40px;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-dot{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#2563eb;
+    border:5px solid white;
+    border-radius:50%;
+    top:35px;
+    right:-10px;
+    box-shadow:0 0 10px rgba(37,99,235,.3);
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-10px;
+}
+
+.timeline-content{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.timeline-content:hover{
+    transform:translateY(-8px);
+}
+
+/*==========================
+        SKILLS
+===========================*/
+
+.skill-card{
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    cursor:pointer;
+}
+
+.skill-card i{
+    font-size:45px;
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.skill-card h5{
+    font-weight:600;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    background:#2563eb;
+    color:white;
+}
+
+.skill-card:hover i{
+    color:white;
+}
+
+/*==========================
+        PROJECTS
+===========================*/
+
+.project-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-body{
+    padding:25px;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(37,99,235,.18);
+}
+
+.project-body h4{
+    margin-bottom:15px;
+}
+
+.project-body p{
+    color:#64748b;
+    margin-bottom:20px;
+}
+
+/*==========================
+    CERTIFICATES
+===========================*/
+
+.certificate-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    margin-bottom:30px;
+}
+
+.certificate-card:hover{
+    transform:translateY(-8px);
+}
+
+/*==========================
+    ACHIEVEMENTS
+===========================*/
+
+.achievement-card{
+    background:#2563eb;
+    color:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:600;
+    transition:.3s;
+}
+
+.achievement-card:hover{
+    transform:scale(1.05);
+}
+
+/*==========================
+    CONTACT
+===========================*/
+
+.contact-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-card h5{
+    margin-top:15px;
+    color:#2563eb;
+}
+
+.contact-card p{
+    color:#475569;
+}
+
+/*==========================
+    FOOTER
+===========================*/
+
+footer{
+    background:#0f172a;
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+footer p{
+    margin:0;
+}
+
+/*==========================
+    RESPONSIVE
+===========================*/
+
+@media(max-width:991px){
+
+.hero{
+    text-align:center;
+    padding-top:120px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.profile-img{
+    width:280px;
+    height:280px;
+    margin-bottom:40px;
+}
+
+.timeline::before{
+    left:20px;
+}
+
+.timeline-item{
+    width:100%;
+    left:0!important;
+    padding-left:60px;
+    text-align:left!important;
+}
+
+.timeline-dot{
+    left:10px!important;
+    right:auto;
+}
+
+}
+
+@media(max-width:576px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.section-title{
+    font-size:30px;
+}
+
+.btn{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.social{
+    justify-content:center;
+}
+
+}
